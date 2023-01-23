@@ -55,13 +55,51 @@ if uploaded_file is not None:
         with col2:
             st.dataframe(busy_df)
 
+        # word cloud
+        st.title("Word Cloud")
+        cloud_img=create_stats.WordCloud(user_selected,df)
+        fig,ax=plt.subplot()
+        ax.imshow(cloud_img)
+        st.pyplot(fig)
 
-st.title("ganesh vanave")
 
+        # most commond words in chat
+        st.title("most common words")
+        commond_words_dataframe=create_stats.individual_common_words(user_selected,df)
+        fig,aix=plt.subplot()
+        ax.barh(commond_words_dataframe[0],commond_words_dataframe[1])
+        plt.xticks(rotation="vertical")
+        st.pyplot(fig)
 
+        # Busy Months and Busy Days
+        col1,col2=st.columns(2)
 
+        with col1:
+            st.header("Busy Months Analysis")
+            Month_dataframe=create_stats.busy_months(user_selected,df)
+            # this month dataframe has infomration about 12 months and count of number of times chatted in months
+            months=Month_dataframe[0]
+            months_count=Month_dataframe[1]
+            fig,ax=plt.subplot()
+            ax.bar(months,months_count)
+            plt.xticks(rotation="vertical")
+            st.pyplot(fig)
+        with col2:
+            st.header("Busy Day Analysis")
+            day_dataframe=create_stats.busy_day(user_selected,df)
+            day=day_dataframe[0]
+            day_count=day_dataframe[1]
+            fig,ax=plt.subplot()
+            ax.bar(day,day_count)
+            plt.xticks(rotation="verticle")
+            st.pyplot(fig)
+        
 
-st.write("we ahve paln to go toghrther")
-st.selectbox("please select the user ",options=("ganesh","mayur","sachin"))
-st.title("ganesh vanave")
-st.title("mayur vaanve")
+        st.title("Monthly Timeline")
+        time = create_stats.monthtimeline(user_selected, df)
+        fig, ax = plt.subplots()
+        ax.plot(time['Time'], time['Messages'], color='green')
+        plt.xticks(rotation='vertical')
+        plt.tight_layout()
+        st.pyplot(fig)
+
