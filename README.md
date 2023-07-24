@@ -10,3 +10,8 @@ By using this pipeline, you can process your WhatsApp chat export and visualize 
 
 3. Running the Analyzer: Open a terminal or command prompt, navigate to the project directory, and execute the following command:
    python Application.py
+
+4. Data Processing: The script will load the data, clean and preprocess it, and perform various analyses, such as message count, word frequency, and user activity.
+   The processed data will be saved as a new CSV file in the same directory.
+
+5. Interactive Dashboard: After the analysis is complete, the Streamlit dashboard will automatically open in your default web browser. The dashboard provides an intuitive interface to explore and visualize the WhatsApp chat    insights.
