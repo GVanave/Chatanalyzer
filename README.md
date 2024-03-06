@@ -1,17 +1,36 @@
-# Whatsapp-App
-This Python-based WhatsApp Data Analyzer is a powerful tool that allows you to analyze and gain insights from your WhatsApp chat data. 
-By using this pipeline, you can process your WhatsApp chat export and visualize various statistics using an interactive dashboard created with Streamlit.
+# ChatAnalyzer
 
-# How to Use
-1. Data Collection: Export your WhatsApp chat data from the WhatsApp application in "txt" format. Save the exported file to a convenient location on your computer.
+## Overview
+ChatAnalyzer is a Python-based tool designed to analyze and extract insights from chat data. With this powerful pipeline, users can process their chat data exports and visualize statistics through an interactive dashboard built with Streamlit.
 
-2. Installation: Before running the pipeline, make sure you have Python installed. Use the following command to install the required packages:
-   pip install pandas streamlit matplotlib
+## How to Use
 
-3. Running the Analyzer: Open a terminal or command prompt, navigate to the project directory, and execute the following command:
-   python Application.py
+### Data Collection
+- Export your chat data from the messaging application in "txt" format.
+- Save the exported file to a convenient location on your computer.
 
-4. Data Processing: The script will load the data, clean and preprocess it, and perform various analyses, such as message count, word frequency, and user activity.
-   The processed data will be saved as a new CSV file in the same directory.
+### Installation
+- Ensure you have Python installed on your system.
+- Install the required packages using the following command:
 
-5. Interactive Dashboard: After the analysis is complete, the Streamlit dashboard will automatically open in your default web browser. The dashboard provides an intuitive interface to explore and visualize the WhatsApp chat    insights.
+
+### Running the Analyzer
+- Open a terminal or command prompt.
+- Navigate to the project directory.
+- Execute the following command:
+
+
+### Data Processing
+- The script will load, clean, and preprocess the chat data.
+- Various analyses will be performed, including message count, word frequency, and user activity.
+- The processed data will be saved as a new CSV file in the same directory.
+
+### Interactive Dashboard
+- After the analysis is complete, the Streamlit dashboard will automatically open in your default web browser.
+- The dashboard provides an intuitive interface to explore and visualize the chat insights.
+
+## Note
+- Make sure to export your chat data in "txt" format before using the tool.
+- For any questions or issues, feel free to reach out to the developer.
+
+
