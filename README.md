@@ -19,8 +19,10 @@ ChatAnalyzer is a Python-based tool designed to analyze and extract insights fro
 - Navigate to the project directory.
 - Execute the following command:
 
-
+*python Application.py*
 ### Data Processing
+
+
 - The script will load, clean, and preprocess the chat data.
 - Various analyses will be performed, including message count, word frequency, and user activity.
 - The processed data will be saved as a new CSV file in the same directory.
